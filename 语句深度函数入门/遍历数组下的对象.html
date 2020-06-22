@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var student = [
+            {name:'wang',age:23},
+        ]
+        for(i=0;i<student.length;i++){
+            if(typeof student[i] ==='object'){
+                for(key in student[i] ){
+                    console.log(key+':'+student[i][key])
+                }
+            }
+        }
+        // let n;
+        // n++;
+        // console.log(n)
+    </script>
+</body>
+</html>

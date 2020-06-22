@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str = '我是一个好人，哈哈哈，我就是我，一个好人';
+        //slice()表示从第几个索引值（闭区间）开始截取字符到第几个开区间
+        var res = str.slice(3,7);
+        console.log(res)
+        //str.substr()返回字符片段 从第几个字符开始截取字符长度为len
+        var res1 = str.substr(5,6);
+        //str.subrtring()从第几个索引只开始截取字符到第几个开区间
+        var res2 = str.substring(3,7);
+        //返回传入索引对应的字符
+        var res3 = str.charAt(3);
+
+        //将所有的字符变小写
+        var res4 = str.toLocaleLowerCase();
+        //将所有的字符变大写
+        var res5 = str.toLocaleUpperCase();
+    </script>
+</body>
+</html>

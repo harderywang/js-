@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // for(i = 0; i < 5; i++){
+        //     //执行多次
+        //     console.log(11111 ,i)
+        // }
+        // //外面执行一次
+        // console.log(i)//5
+
+        //使用 = 赋值
+        // var res;
+        // for(i = 0;i < 5;i++){
+        //     res = i;
+        // }
+        // console.log(res)
+
+        // var res = '';
+        // for(i = 0;i < 5;i++){
+        //     //循环体中 用 += 展示字符串拼接的过程
+        //     res += i;
+        //     console.log(res)// 0 01 012 0123 01234
+        // }
+
+        // 与页面有关的都是字符串
+        // let h1 = '';
+        // for( i = 0;i < 5; i++){
+        //    h1 += '<h1>这是一个页面</h1>'
+        // }
+        // document.write(h1)
+
+
+        // for( i = 0;i < 5; i++){
+        //   if(i<3){
+        //       console.log(i)//0 1 2 
+        //   }
+        // }
+
+        //程序优化
+        for( i = 0;i < 5; i++){
+          if(i===3){
+              console.log(i)
+              //跳出本次循环 
+            //   break;
+              //仅结束本次循环
+              continue;
+              console.log('hahdhdfh')
+          }
+          console.log(i)
+        }
+    </script>
+</body>
+</html>
