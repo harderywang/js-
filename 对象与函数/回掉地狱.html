@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function foo(callback){
+            console.log('foo')
+            callback(function(){
+                console.log('callBack 的回调函数')
+            })
+        }
+        foo(function(callBack){
+            console.log('回调函数')
+            callBack();
+        })
+        //1 回调函数 是异步程序
+        // 2 回调函数最难的是 不知道方法体内回调的是哪个函数
+        // conolse.log(callback)看一下到底执行的是哪一个函数
+        //XXX()一定函数执行 内置API 自定义 函数 回调函数。。。
+        // 对于API API的作用是什么？ 参数有什么意义 返回值是什么
+        // 自定义函数 ：这个函数到底做了什么 返回值是什么 形参和实参
+        //回调函数：在众多函数中到底执行的是哪一个
+
+        //异步：不是按照从上往下执行的程序 都是异步的
+        // 放在上面执行的程序后执行 因为慢
+        // 凡是执行慢的程序 都是以异步的方式存在的
+
+        //常见异步处理函数：回调函数、
+        function ht(callback){
+            console.log(1);
+            callback(
+                function(callback){
+                    console.log(3)
+                    callback(
+                        function(){
+                            console.log(5)
+                        }
+                    )
+                }
+            )
+        }
+        ht(
+            function(callback){
+                console.log(2)
+                callback(
+                    function(callback){
+                        console.log(4)
+                        callback()
+                    }
+                )
+            }
+        )
+    </script>
+</body>
+</html>

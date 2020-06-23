@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var runningSum = function (nums) {
+        //     nums.reduce((prev, curr, index) => {
+        //         nums[index] = prev + curr
+        //         return nums[index]
+        //     }, 0)
+        //     console.log(nums)
+        // };
+        //  runningSum([1, 2, 3, 4])
+
+        //计算数组累加加的和
+        //arr.reduce((acc,ele,index)=>{return acc+ele},0)
+        //callback中的第一个累加值 第二个参数数组当前计算值 
+        //第三个值是当前索引值 第四个值是该数组
+        //reduce中的第二个参数是设置累加器初始值
+        //返回值 函数累计处理的结果
+
+        var arr = [3,5,7,8];
+        let n=0
+        let red=arr.reduce(function(acc,ele,index,arr){
+            return arr[index] = acc+ele
+        },0)
+        console.log(arr)
+
+
+
+        //数组过滤，即数组筛选arr.filter((ele,index,arr)=>{return },this)
+        //ele正在处理的元素
+        //index 正在处理的元素索引
+        //调用filter方法的数组
+        //this=>执行 callback 时，用于 this 的值。
+        //返回值一个新的、由通过测试的元素组成的数组，如果没有任何数组元素通过测试，则返回空数组。
+        var arr2 = [2,3,4,5,6];
+        let fil = arr2.filter((ele,index,arr)=>{
+            return ele > 4
+        })
+        console.log(fil)
+
+        //map arr.map((ele,index,arr)=>{},this)
+        //ele当前正在处理的元素
+        //index当前正在处理的元素索引
+        //调用map方法的数组
+        //返回值 一个由原数组每个元素执行回调函数的结果组成的新数组。
+
+
+        //some arr.some((ele,index,arr)=>{},this)
+        //测试数组中是不是至少有1个元素通过了被提供的函数测试。它返回的是一个Boolean类型的值
+         //ele当前正在处理的元素
+        //index当前正在处理的元素索引
+        //调用some方法的数组
+        //返回 布尔值
+
+        //every arr.every((ele,index,arr)=>{},this) 
+        //测试一个数组内的所有元素是否都能通过某个指定函数的测试。它返回一个布尔值。
+         //ele当前正在处理的元素
+        //index当前正在处理的元素索引
+        //调用every方法的数组
+        //返回 布尔值
+    </script>
+</body>
+
+</html>

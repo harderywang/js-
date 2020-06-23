@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var a=function(){
+        //     console.log('haha')
+        // }
+
+        // function foo(a){
+        //     console.log(1)
+        // }
+        // foo()
+        //回调函数 将一个函数作为参数传递给另一个函数
+        function foo(callBack){
+            callBack()//回调函数 异步 直接在一个函数中调用另一个函数 执行的是参数
+            console.log('foo');
+            console.log(callBack)
+        }
+
+        var bar = function(){
+            console.log('我是回调函数')
+        }
+        foo(bar);
+        //如果想让bar 函数执行 在foo 函数中执行 有几种方式
+        foo(function(){
+            console.log('回调函数')
+        })
+
+
+    </script>
+</body>
+</html>
